@@ -32,8 +32,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!-- Custom-Files -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    
     <!-- Bootstrap-Core-CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" media="all" />
+    
     <!-- Style-CSS -->
     <!-- font-awesome-icons -->
     <link href="{% static 'css/font-awesome.css'%}" rel="stylesheet">
@@ -124,7 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <h2 class="logo-2 mb-lg-4 mb-3">
                         <a href="index.html"><span class="fa fa-bold" aria-hidden="true"></span>ootie</a>
                     </h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Comfortable shoes and the freedom to leave are the two most important things in life.</p>
                     <h4 class="sub-con-fo ad-info my-4">Catch on Social</h4>
                     <ul class="w3layouts_social_list list-unstyled">
                         <li>
@@ -227,7 +229,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                     </div>
                     <div class="cpy-right text-left row">
-                        <p class="col-md-10">© 2019 Bootie. All rights reserved | Design by
+                        <p class="col-md-10">© 2019 Bootie. Designed by Collin | Inspired by
                             <a href="http://w3layouts.com"> W3layouts.</a>
                         </p>
                         <!-- move top icon -->
@@ -239,6 +241,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </footer>
     <!-- //footer -->
+
+
+    <!-- jquery -->
+<script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<!-- //jquery -->
+    <!-- imagezoom -->
+	<script src="{% static 'js/imagezoom.js'%}"></script>
+	<!-- //imagezoom -->
+
+    <!-- flexslider -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css'%}" type="text/css" media="screen" />
+
+	<script src="{% static 'js/jquery.flexslider.js'%}"></script>
+	<script>
+		// Can also be used with $(document).ready()
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				controlNav: "thumbnails"
+			});
+		});
+	</script>
+	<!-- //FlexSlider-->
+
 </body>
 
 </html>
+

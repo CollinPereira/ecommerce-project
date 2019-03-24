@@ -18,7 +18,7 @@
       <figure>
       <img src="{{shoe.display_image.url}}">
       <p>{{shoe.brand}}</p>
-        <figcaption>{{shoe.name}}</figcaption>
+        <a href="{% url 'details' shoe.id%}"><figcaption> {{shoe.name}}</figcaption></a> 
         
         <span class="price">{{shoe.price}}</span>
         <a class="button" href="#">Add to cart</a>

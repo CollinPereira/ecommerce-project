@@ -4,6 +4,84 @@
 	License: Creative Commons Attribution 3.0 Unported
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+
+.snipcart-details input.button {
+    font-size: 13px;
+    color: #fff;
+    background: #0879c9;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 13px;
+    outline: none;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.45);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.snipcart-details input.button:hover {
+    background: #000;
+}
+
+
+/*-- single-page --*/
+
+.single-right-left h3 {
+    font-size: 25px;
+    color: #000;
+}
+
+.single-right-left p label {
+    color: #000;
+}
+
+.single-right-left del {
+    font-size: 15px;
+    color: #999;
+}
+
+.single-infoagile ul li {
+    display: block;
+    font-size: 14px;
+}
+
+.product-single-w3l {
+    border-top: 1px solid #0879c9;
+}
+
+.product-single-w3l p i {
+    color: #0879c9;
+    font-size: 24px;
+}
+
+.product-single-w3l p {
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.product-single-w3l ul li {
+    list-style: inside;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.occasion-cart .snipcart-details {
+    width: 38%;
+    margin: 0;
+}
+
+/*-- //single-page --*/
+
 #wrap{
 	width: 90%;
 	max-width: 1100px;

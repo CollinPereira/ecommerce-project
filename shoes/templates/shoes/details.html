@@ -4,31 +4,98 @@
 
 {%block breadcrumb%}
 {%block title%}
-hello
+{{shoe.name}}
 {%endblock%}
 {%endblock%}
 
 {%block content%}
-product
-<div class="row">
-    <div class="col-lg-5 col-md-8 single-right-left ">
-        <div class="grid images_3_of_2">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li data-thumb="images/si1.jpg">
-                        <div class="thumb-image">
-                            <img src="images/si1.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-                    </li>
-                    <li data-thumb="images/si2.jpg">
-                        <div class="thumb-image">
-                            <img src="images/si2.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-                    </li>
-                    <li data-thumb="images/si3.jpg">
-                        <div class="thumb-image">
-                            <img src="images/si3.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
+{% load staticfiles%}
+
+<div class="banner-bootom-w3-agileits py-5">
+    <div class="container py-xl-4 py-lg-2">
+        <!-- tittle heading -->
+        <!-- <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+           NIKE</h3> -->
+        <!-- //tittle heading -->
+        <div class="row">
+            <div class="col-lg-8 col-md-8 single-right-left ">
+                <div class="grid images_3_of_2">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li data-thumb="{{shoe.image1.url}}">
+                                <div class="thumb-image">
+                                    <img src="{{shoe.image1.url}}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+                            </li>
+                            <li data-thumb="{{shoe.image2.url}}">
+                                <div class="thumb-image">
+                                    <img src="{{shoe.image2.url}}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+                            </li>
+                            <li data-thumb="{{shoe.image3.url}}">
+                                <div class="thumb-image">
+                                    <img src="{{shoe.image3.url}}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-1"></div> -->
+
+            <div class="col-lg-4 single-right-left simpleCart_shelfItem" style="text-align:center;">
+                <h2 class="mb-3" style="margin-top:25px;"> {{shoe.brand}}</h2>
+                <h5><p>{{shoe.name}}  </p></h5>
+                <h3><p style="color:red;">{{shoe.price}} </p></h3>
+                <p class="mb-3">
+                    <label>Free delivery</label>
+                </p>    
+                <p class="mb-3">
+                    <label>Cash on Delivery Eligible.</label>
+                </p>   
+                <p class="mb-3">
+                    <label>Shipping Speed to Delivery.</label>
+                </p>   
+                <p class="mb-3">
+                    <label>Pivot points in the forefoot allow for smooth transitions in all directions</label>
+                </p>    
+                <div class="single-infoagile">
+                    <ul>
+                        <li class="mb-3">
+                            Non-marking rubber outsole for durable traction
+                        </li>
+                        <li class="mb-3">
+                            Padded collar for a snug and secure fit.
+                        </li>
+                        <li class="mb-3">
+                            Foam midsole  for lightweight cushioning
+                        </li>
+                        <li class="mb-3">
+                            Premium full-grain leather
+                        </li>
+                        <li class="mb-3">
+                            Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
+                        </li>
+                    </ul>
+                </div>
+                <a class="button" href="#">Add to Cart</a>
+                <!-- <div class="occasion-cart">
+                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="business" value=" " />
+                                <input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" />
+                                <input type="hidden" name="amount" value="200.00" />
+                                <input type="hidden" name="discount_amount" value="1.00" />
+                                <input type="hidden" name="currency_code" value="USD" />
+                                <input type="hidden" name="return" value=" " />
+                                <input type="hidden" name="cancel_return" value=" " />
+                                <input type="submit" name="submit" value="Add to cart"  class="button" />
+                            </fieldset>
+                        </form>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
