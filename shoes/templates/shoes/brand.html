@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+
+
+{%block breadcrumb%}
+{%block title%}
+{{brand}}
+{%endblock%}
+{%endblock%}
+
+{%block content%}
+<section class="about py-5">
+        <div class="container pb-lg-3">
+            <h3 class="tittle text-center">{{brand}}</h3>
+            
+                	<div id="columns" class="columns_3">
+{% for shoe in shoes.all%}
+      <figure>
+      <img src="{{shoe.display_image.url}}">
+      <p>{{shoe.brand}}</p>
+        <figcaption>{{shoe.name}}</figcaption>
+        
+        <span class="price">{{shoe.price}}</span>
+        <a class="button" href="#">Add to cart</a>
+        </figure>
+{%endfor%}
+</div>
+
+</div>
+</section>
+{%endblock%}
