@@ -6,6 +6,8 @@ from django.views.generic import ListView
 # Create your views here.
 def home(request):
     shoes=Shoes.objects.all().order_by('-date')[:9]
+    search=request.GET.get('search')
+    print(search)
     return render(request,'shoes/home.html',{'shoes':shoes})
 
 def nike(request):
