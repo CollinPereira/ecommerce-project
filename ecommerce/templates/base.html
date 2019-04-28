@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
     <!-- //Fonts -->
-
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -74,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <ul>
                                 <li><a href="{%url 'nike'%}">Nike</a></li>
                                 <li><a href="{%url 'adidas'%}">Adidas</a></li>
-                                <li><a href="shop-single.html">Puma</a></li>
+                                <li><a href="{% url 'puma' %}">Puma</a></li>
                             </ul>
                         </li>
                         <li class="{{state}}"><a href="contact.html">Contact</a></li>
@@ -90,11 +90,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     
                                 </ul>
                             </li>
+
+                            <li> <a href="#"><i class="fa fa-shopping-cart" style="font-size:27px;color:rgb(255, 255, 255);"></i></a>   </li>
                         {%else%}
                         <li class="{{register_state}}"><a href="{%url 'signup'%}">Register</a></li>
                         <li class="{{login_state}}"><a href="{%url 'login'%}">Login</a></li>
                         {%endif%}
                     </ul>
+                    <form action="{% url 'search' %}" name="abc" autocomplete="on">
+                        <input type="search" name=search placeholder="search here...">
+                        <i class="fa fa-search"></i>
+                      </form>
                 </nav>
                 <!-- //nav -->
             </div>
@@ -106,7 +112,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!---->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="{% url 'home' %}">Home</a>
         </li>
         <li class="breadcrumb-item active">{%block breadcrumb%} {%endblock%}</li>
     </ol>

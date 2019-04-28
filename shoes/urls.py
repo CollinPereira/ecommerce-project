@@ -1,11 +1,12 @@
 from django.urls import path
-from .views import ShoesListView
+from .views import NikeListView , SearchListView ,AdidasListView,PumaListView
 from shoes import views
 
 urlpatterns=[
     # path('nike/',views.nike,name='nike'),
-    path('nike/',ShoesListView.as_view(),name='nike'),
-    path('adidas/',views.adidas,name='adidas'),
-    path('puma/',views.puma,name='puma'),
+    path('nike/',NikeListView.as_view(),name='nike'),
+    path('search/',SearchListView.as_view(),name='search'),
+    path('adidas/',AdidasListView.as_view(),name='adidas'),
+    path('puma/',PumaListView.as_view(),name='puma'),
     path('<int:shoe_id>/',views.details,name='details'),
 ]
