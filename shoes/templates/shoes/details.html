@@ -99,7 +99,39 @@
             </div>
         </div>
         <!-- here -->
-        
+        <section class="about py-5" id="new-arrivals">
+            <div class="container pb-lg-3">
+                <h3 class="tittle text-center">Similar Products</h3>
+                <div class="row">
+                    {% for s in allshoes.all%}
+                    {% if s.pk != shoe.pk %}
+                    <div class="col-md-4 product-men">
+                        <div class="product-shoe-info shoe text-center">
+                            <div class="men-thumb-item">
+                                    <span class="product-new-top">suggested</span>
+                                <img src="{{s.display_image.url}}" class="img-fluid" alt="">
+                                
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a href="{% url 'details' s.id%}">{{s.name}} </a>
+                                </h4>
+                                <p> {{s.brand}} </p>
+                                <div class="product_price">
+                                    <div class="grid-price">
+                                        <span class="money">{{s.price}}</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endif%}
+                    {%endfor%}
+    
+                </div>
+            </div>
+        </section>
     </div>
 </div>
 
