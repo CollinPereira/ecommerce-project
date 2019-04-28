@@ -8,5 +8,6 @@ urlpatterns=[
     path('search/',SearchListView.as_view(),name='search'),
     path('adidas/',AdidasListView.as_view(),name='adidas'),
     path('puma/',PumaListView.as_view(),name='puma'),
+    path('cart/',views.cart,name='cart'),
     path('<int:shoe_id>/',views.details,name='details'),
 ]

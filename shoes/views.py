@@ -13,8 +13,10 @@ def about(request):
     return render(request,'shoes/about.html')
 
 def contact(request):
-    shoes=Shoes.objects.all().order_by('-date')[:9]
-    return render(request,'shoes/home.html',{'shoes':shoes})
+    return render(request,'shoes/contact.html')
+
+def cart(request):
+    return render(request,'shoes/cart.html')
 
 
 class NikeListView(ListView):
