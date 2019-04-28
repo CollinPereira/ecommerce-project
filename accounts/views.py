@@ -33,3 +33,6 @@ def login(request):
             return render(request,'accounts/login.html',{'login_state':'active','error':'Username/Password is incorrect'})
     else:
         return render(request,'accounts/login.html',{'login_state':'active'})
+
+def profile(request):
+    return render(request,'accounts/profile.html')

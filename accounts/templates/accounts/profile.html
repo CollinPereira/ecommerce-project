@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+
+
+{%block breadcrumb%}
+{%block title%}
+Profile
+{%endblock%}
+{%endblock%}
+
+{%block content%}
+<section class="ab-info-main py-5">
+    <div class="container py-3">
+         
+        <h3 class="tittle text-center"> {{user.get_username}}'s Profile </h3>
+        <!-- <div class="row contact-main-info mt-5"> -->
+            <!-- <div class="alert alert-danger"> <p class="text-center">Cart Empty</p> </div> -->
+        <div class="text-center">
+            <h4> <p> First Name : {{user.first_name}} </p> </h4> 
+            <h4> <p> Lasr Name : {{user.last_name}} </p></h4> 
+            <h4> <p> Email : {{user.email}} </p> </h4> 
+        </div>
+    </div>
+</section>
+{%endblock%}

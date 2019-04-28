@@ -9,13 +9,20 @@ def home(request):
     shoes=Shoes.objects.all().order_by('-date')[:9]
     return render(request,'shoes/home.html',{'shoes':shoes})
 
+def about(request):
+    return render(request,'shoes/about.html')
+
+def contact(request):
+    shoes=Shoes.objects.all().order_by('-date')[:9]
+    return render(request,'shoes/home.html',{'shoes':shoes})
+
 
 class NikeListView(ListView):
     model=Shoes
     queryset = Shoes.objects.filter(brand__iexact="nike")
     template_name = 'shoes/brand.html'
     context_object_name = 'shoes'
-    paginate_by= 2
+    paginate_by= 9
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['brand'] = 'NIKE'
@@ -26,7 +33,7 @@ class PumaListView(ListView):
     queryset = Shoes.objects.filter(brand__iexact="puma")
     template_name = 'shoes/brand.html'
     context_object_name = 'shoes'
-    paginate_by= 2
+    paginate_by= 9
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['brand'] = 'PUMA'
@@ -37,7 +44,7 @@ class AdidasListView(ListView):
     queryset = Shoes.objects.filter(brand__iexact="adidas")
     template_name = 'shoes/brand.html'
     context_object_name = 'shoes'
-    paginate_by= 2
+    paginate_by= 9
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['brand'] = 'ADIDAS'
@@ -48,7 +55,7 @@ class SearchListView(ListView):
     # queryset = Shoes.objects.filter(brand__iexact="nike")
     template_name = 'shoes/search.html'
     context_object_name = 'shoes'
-    paginate_by= 1
+    paginate_by= 9
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['brand'] = self.request.GET.get('search')
